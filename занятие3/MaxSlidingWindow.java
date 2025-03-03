@@ -1,4 +1,4 @@
-package Алгоритмы.Занятие3;
+package Algorithms.Lesson3;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
