@@ -25,9 +25,7 @@ public class PostfixNotation {
             if (token.matches("-?\\d+")) {
                 stack.push(Integer.parseInt(token));
             } else if (token.equals("+") || token.equals("-") || token.equals("*")) {
-                if (stack.size() < 2) {
-                    throw new IllegalArgumentException("Неверный постфикс");
-                }
+                
                 int operand2 = stack.pop();
                 int operand1 = stack.pop();
                 int result = 0;
@@ -43,15 +41,11 @@ public class PostfixNotation {
                         break;
                 }
                 stack.push(result);
-            } else if (!token.isEmpty()){
-                throw new IllegalArgumentException("Неверный знак ");
-            }
-        }
-        if (stack.size() != 1) {
-            throw new IllegalArgumentException("Неверный постфикс");
+            } 
         }
         return stack.pop();
     }
 }
+
 
 
