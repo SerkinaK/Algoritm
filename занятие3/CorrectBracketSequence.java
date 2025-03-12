@@ -9,7 +9,7 @@ public class CorrectBracketSequence {
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String s = reader.readLine();
-        String result = CorrectBracket(s);
+        var result = CorrectBracket(s);
 
         writer.write(result);
         writer.newLine();
